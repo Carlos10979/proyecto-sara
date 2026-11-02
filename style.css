@@ -19,7 +19,7 @@ h2{font:500 clamp(2.5rem,6vw,4.7rem)/1.05 'Cormorant Garamond',serif;margin:18px
 .letter-card p,.memory-copy p{color:#c4d1e5;line-height:2;font-size:.96rem;font-weight:300}.highlight-line{color:var(--ice)!important;font:italic 500 1.45rem 'Cormorant Garamond',serif!important;margin-top:28px}
 .signature{margin-top:35px;color:#819cbd;font-size:.8rem}.signature span{color:var(--blue);font-size:1.2rem;margin-left:8px}
 .memory{min-height:650px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(30px,7vw,90px)}
-.memory-image{min-height:570px;background:linear-gradient(0deg,rgba(4,10,24,.12),rgba(4,10,24,.04)),url('abrazo-azul.jpeg') center 35%/cover;border-radius:3px;box-shadow:0 20px 70px rgba(20,105,180,.15)}
+.memory-image{min-height:570px;background:linear-gradient(0deg,rgba(4,10,24,.12),rgba(4,10,24,.04)),url('/proyecto-sara/abrazo-azul.jpeg') center 35%/cover;border-radius:3px;box-shadow:0 20px 70px rgba(20,105,180,.15)}
 .memory-copy h2{font-size:clamp(2.7rem,5vw,4.5rem)}.wishes{text-align:center;max-width:950px}.section-heading{margin:22px auto 12px}
 .section-intro{color:var(--muted);max-width:580px;margin:0 auto;line-height:1.9;font-size:.9rem;font-weight:300}
 .candles{display:flex;justify-content:center;align-items:end;gap:clamp(10px,4vw,45px);margin:55px auto 35px}
@@ -44,7 +44,7 @@ textarea:focus{border-color:rgba(154,229,255,.65)}textarea::placeholder{color:#6
 .photo-frame img{width:100%;height:100%;object-fit:cover;display:block;color:#a9b9d7;font-size:.8rem}
 .photo-caption{font:500 clamp(1.25rem,2.5vw,1.65rem)/1.35 'Cormorant Garamond',serif;color:#dcecff;margin:19px 8px 2px}
 .photos-tip{color:#7187a8;font-size:.72rem;line-height:1.7;margin:25px auto 0;max-width:570px}
-.finale{max-width:none;position:relative;text-align:center;padding:140px 24px 110px;overflow:hidden;background:linear-gradient(180deg,#050b1b 0%,rgba(7,19,43,.8) 35%,#050b1b 100%),url('bajo-las-estrellas.jpeg') center 55%/cover}
+.finale{max-width:none;position:relative;text-align:center;padding:140px 24px 110px;overflow:hidden;background:linear-gradient(180deg,#050b1b 0%,rgba(7,19,43,.8) 35%,#050b1b 100%),url('/proyecto-sara/bajo-las-estrellas.jpeg') center 55%/cover}
 .finale-bg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(32,104,183,.18),transparent 65%);pointer-events:none}
 .finale-content{position:relative;max-width:740px;margin:auto}.final-star{font-size:2rem;color:var(--blue);text-shadow:0 0 25px #66cfff}
 .finale h2{margin:25px auto}.finale h2 span{font-family:sans-serif;font-size:.5em;white-space:nowrap}.finale-content>p:not(.section-label){color:#c3d0e5;line-height:1.9;max-width:520px;margin:0 auto 28px;font-weight:300}
