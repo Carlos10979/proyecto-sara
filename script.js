@@ -33,7 +33,7 @@ document.getElementById("saveAnswer").addEventListener("click", async () => {
   button.textContent = "Enviando tus deseos...";
 
   try {
-    const response = await fetch("https://formsubmit.co/ajax/carloscvid109@gmail.com", {
+    const response = await fetch("https://formsubmit.co/ajax/saravpuerta@gmail.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
