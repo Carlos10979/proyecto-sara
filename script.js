@@ -17,11 +17,48 @@ wishButtons.forEach(button=>button.addEventListener("click",()=>{
 
   else all.textContent=`Ya descubriste ${foundWishes.size} de 5 deseos. Sigue encendiendo las velitas. ✨`;
 }));
-document.getElementById("saveAnswer").addEventListener("click",()=>{
-  const answer=document.getElementById("answer").value.trim(),note=document.getElementById("answerNote");
-  if(!answer){note.textContent="Escribe primero tus deseos; quiero conocerlos. ♡";document.getElementById("answer").focus();return}
-  note.textContent="Qué bonito que compartas tus deseos. Puedes volver a leerlos aquí mientras esta página siga abierta. ♡";
+
+document.getElementById("saveAnswer").addEventListener("click", async () => {
+  const answer = document.getElementById("answer").value.trim();
+  const note = document.getElementById("answerNote");
+  const button = document.getElementById("saveAnswer");
+
+  if (!answer) {
+    note.textContent = "Escribe primero tus deseos; quiero conocerlos. ♡";
+    document.getElementById("answer").focus();
+    return;
+  }
+
+  button.disabled = true;
+  button.textContent = "Enviando tus deseos...";
+
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/carloscvid109@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        message: answer,
+        _subject: "Los deseos de nuestra aventura ♡",
+        _template: "table"
+      })
+    });
+
+    if (!response.ok) throw new Error("No se pudo enviar");
+
+    note.textContent = "Tus deseos llegaron correctamente. Gracias por compartirlos conmigo. ♡";
+    document.getElementById("answer").value = "";
+
+  } catch (error) {
+    note.textContent = "No pudimos enviar tus deseos. Inténtalo nuevamente. ♡";
+  }
+
+  button.disabled = false;
+  button.textContent = "Guardar mis deseos";
 });
+
 document.getElementById("yesBtn").addEventListener("click",()=>{
   document.getElementById("finalMessage").classList.add("show");
   document.getElementById("finalMessage").scrollIntoView({behavior:"smooth",block:"center"});
