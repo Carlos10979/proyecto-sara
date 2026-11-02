@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071126">
+  <title>Tu llegada ✦</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="star-layer" aria-hidden="true"></div>
+  <div class="progress" id="progress"></div>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-glow"></div>
+      <p class="eyebrow reveal">PARA ESTE MOMENTO TAN NUESTRO</p>
+      <h1 class="hero-title reveal">Tu <em>llegada</em></h1>
+      <p class="hero-subtitle reveal">Hay abrazos que hacen que la espera valga la pena.</p>
+      <button class="primary-button reveal" id="beginBtn">Abrir nuestra historia <span>✦</span></button>
+      <div class="scroll-hint">DESLIZA PARA DESCUBRIR <span>↓</span></div>
+    </section>
+
+    <section class="letter section" id="carta">
+      <div class="section-label">01 — POR FIN</div>
+      <div class="letter-card reveal">
+        <div class="small-star">✦</div>
+        <h2>Se llegó el <em>gran día</em></h2>
+        <p>Ese que tanto esperaba y que durante todos estos días anhelé con ilusión. He extrañado tu presencia, tu olor y esa sensación tan especial que me haces sentir cada vez que te tengo frente a mí.</p>
+        <p>Hoy, por fin, puedo decir que tenerte nuevamente a mi lado, poder verte y tenerte físicamente conmigo, me llena de una alegría inmensa y de mucha ilusión por todo lo bonito que está por venir para los dos.</p>
+        <p class="highlight-line">Qué bonito poder vivir este momento contigo.</p>
+        <div class="signature">Este momento también es nuestro. <span>♡</span></div>
+      </div>
+    </section>
+
+    <section class="memory section" id="abrazo">
+      <div class="memory-image"></div>
+      <div class="memory-copy reveal">
+        <span class="section-label">02 — AQUÍ Y AHORA</span>
+        <h2>Después de tanto<br><em>extrañarte...</em></h2>
+        <p>Que el tiempo se detenga un poquito. Que sobren los abrazos, las miradas y las conversaciones sin prisa. Hoy no hace falta nada perfecto: solo estar juntos y disfrutar que por fin llegó este día.</p>
+      </div>
+    </section>
+
+    <section class="wishes section" id="deseos">
+      <div class="section-label">03 — PIDE UN DESEO</div>
+      <h2 class="section-heading reveal">Mis deseos para <em>este encuentro</em></h2>
+      <p class="section-intro reveal">Enciende una pequeña luz y descubre cada uno de mis deseos para nosotros.</p>
+      <div class="candles">
+        <button class="candle-card" data-wish="0" aria-label="Descubrir deseo uno"><span class="flame">✧</span><span class="candle"><i></i></span><span class="candle-number">01</span></button>
+        <button class="candle-card" data-wish="1" aria-label="Descubrir deseo dos"><span class="flame">✧</span><span class="candle"><i></i></span><span class="candle-number">02</span></button>
+        <button class="candle-card" data-wish="2" aria-label="Descubrir deseo tres"><span class="flame">✧</span><span class="candle"><i></i></span><span class="candle-number">03</span></button>
+        <button class="candle-card" data-wish="3" aria-label="Descubrir deseo cuatro"><span class="flame">✧</span><span class="candle"><i></i></span><span class="candle-number">04</span></button>
+        <button class="candle-card" data-wish="4" aria-label="Descubrir deseo cinco"><span class="flame">✧</span><span class="candle"><i></i></span><span class="candle-number">05</span></button>
+      </div>
+      <div class="wish-reveal" id="wishReveal" aria-live="polite">
+        <span class="wish-count" id="wishCount">UN DESEO PARA NOSOTROS</span>
+        <p id="wishText">Toca una de las velitas para descubrirlo ✨</p>
+      </div>
+      <div class="wish-progress"><span id="wishProgress"></span></div>
+      <p class="all-wishes" id="allWishes">Cuando descubras los cinco deseos, habrá una pregunta para ti. ♡</p>
+    </section>
+
+    <section class="your-wishes section" id="tus-deseos">
+      <div class="section-label">04 — AHORA TE TOCA A TI</div>
+      <h2 class="section-heading reveal">¿Cuáles son tus <em>deseos?</em></h2>
+      <p class="section-intro reveal">Quiero conocer lo que sueñas para este encuentro y para nosotros. No hay respuestas correctas; quiero escuchar tu corazón.</p>
+      <div class="answer-box reveal">
+        <label for="answer">Tus deseos para este encuentro</label>
+        <textarea id="answer" placeholder="Me gustaría que..." rows="4"></textarea>
+        <button class="primary-button" id="saveAnswer">Guardar mi respuesta <span>♡</span></button>
+        <p class="answer-note" id="answerNote">Tu respuesta se queda en esta página mientras esté abierta.</p>
+      </div>
+    </section>
+
+    <section class="photos-section section" id="fotos">
+      <div class="section-label">05 — LO QUE VEO EN TI</div>
+      <h2 class="section-heading reveal">¿Quieres saber qué eres <em>para mí?</em></h2>
+      <p class="section-intro reveal">Cada foto guarda un pedacito de lo que significas para mí. ♡</p>
+      <div class="photo-grid">
+        <article class="photo-card reveal">
+          <div class="photo-frame"><img src="imagenes/micita.jpeg" alt="Un recuerdo juntos"></div>
+          <p class="photo-caption">Mi cita favorita🩵</p>
+        </article>
+        <article class="photo-card reveal">
+          <div class="photo-frame"><img src="imagenes/recuerdo.jpeg" alt="Un recuerdo especial juntos"></div>
+          <p class="photo-caption">Mi recuerdo más bonito</p>
+        </article>
+        <article class="photo-card reveal">
+          <div class="photo-frame"><img src="imagenes/abrazo.jpeg" alt="Un momento que compartimos"></div>
+          <p class="photo-caption">Mi abrazo seguro!!</p>
+        </article>
+        <article class="photo-card reveal">
+          <div class="photo-frame"><img src="imagenes/tonterias.jpeg" alt="Otro recuerdo de los dos"></div>
+          <p class="photo-caption">Mi persona para hacer tonterías 💙</p>
+        </article>
+        <article class="photo-card reveal">
+          <div class="photo-frame">
+          <img src="imagenes/dias.jpeg" alt="Nuestro recuerdo">
+        </div>
+           <p class="photo-caption">Eres mi momento favorito del día.</p>
+        </article>
+
+<article class="photo-card reveal">
+  <div class="photo-frame">
+    <img src="imagenes/amor.jpeg" alt="Nuestro recuerdo">
+  </div>
+  <p class="photo-caption">Eres mi amor bonito.❤️‍🔥</p>
+</article>
+
+<article class="photo-card reveal">
+  <div class="photo-frame">
+    <img src="imagenes/aventuras.jpeg" alt="Nuestro recuerdo">
+  </div>
+  <p class="photo-caption">Eres mi compañero de aventuras.✌🏻</p>
+</article>
+
+<article class="photo-card reveal">
+  <div class="photo-frame">
+    <img src="imagenes/confidente.jpeg" alt="Nuestro recuerdo">
+  </div>
+  <p class="photo-caption">Eres mi confidente💙</p>
+</article>
+
+<article class="photo-card reveal">
+  <div class="photo-frame">
+    <img src="imagenes/hogar.jpeg" alt="Nuestro recuerdo">
+  </div>
+  <p class="photo-caption">Eres mi hogar.💘</p>
+</article>
+
+<article class="photo-card reveal">
+  <div class="photo-frame">
+    <img src="imagenes/conocer.jpeg" alt="Nuestro recuerdo">
+  </div>
+  <p class="photo-caption">Y quiero conocer el mundo contigo.❤️‍🔥</p>
+</article>
+      </div>
+      <p class="photos-tip">By Sara</p>
+    </section>
+
+    <section class="finale section" id="final">
+      <div class="finale-bg"></div>
+      <div class="finale-content reveal">
+        <span class="final-star">✦</span>
+        <p class="section-label">UN NUEVO CAPÍTULO COMIENZA</p>
+        <h2>¿Estás listo para comenzar esta nueva aventura juntos? <span>🥹❤️</span></h2>
+        <p>Un nuevo capítulo, nuevos sueños y muchísimas historias por vivir a tu lado.</p>
+        <button class="primary-button" id="yesBtn">Sí, contigo ♡</button>
+        <div class="final-message" id="finalMessage">Entonces, que empiece nuestra aventura. Que Dios guíe nuestros pasos, cuide lo que estamos construyendo y nos enseñe a elegirnos con amor cada día. ✨</div>
+        <div class="forever">TÚ + YO <span>✦</span> ESTE NUEVO CAPÍTULO</div>
+      </div>
+    </section>
+  </main>
+  <footer>Hecho con cariño para un reencuentro inolvidable <span>♡</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
